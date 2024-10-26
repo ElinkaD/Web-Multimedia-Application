@@ -1,0 +1,56 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>MusicPlayer</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="page">
+		<audio src="music/The Hatters - Танцы.mp3" id="audio"></audio>
+
+		<div class="track">
+			<div class="visual" id="visual">
+				<canvas id="canvas1"></canvas>
+			</div>
+			<div class="window_track" id="window_track">
+				<div class="pict">
+					<img src="img/The Hatters - Танцы.jpg" alt="КартинкаПодМузыку" id="cover">
+				</div>
+
+				<p id="title">The Hatters - Танцы</p>
+
+				<div class="buttons">
+					<button id="prev" class="action-btn">
+						<img src="img/icons/free-icon-font-angle-double-small-left-3916770.png" alt="назад">
+					</button>
+					<button id="play" class="action-btn action-btn-big">
+						<img src="img/icons/free-icon-font-play-3917607.png" alt="играть" id="play_cover" class="pause play">
+					</button>
+					<button id="next" class="action-btn">
+						<img src="img/icons/free-icon-font-angle-double-small-right-3916777.png" alt="вперед">
+					</button>
+				</div>
+
+				<div class="music_time">
+					<div class="progress-container" id="progress-container">
+						<div class="progress" id="progress"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/sсript.js"></script>
+</body>
+
+</html>

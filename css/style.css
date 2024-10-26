@@ -1,0 +1,221 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active {
+    outline: none;
+}
+a:focus,a:active {
+    outline: none;
+}
+nav,footer,header,aside {
+    display: block;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+a,a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/*--------------------*/
+
+body{
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        #f2e163 23.8%,
+        #D99C79 92%
+    );
+}
+.track{
+    display: grid;
+    grid-template-columns: 0px 1fr;
+
+    place-items: center;
+}
+.visual{
+    width: 100vw;
+    height: 100vh;
+    grid-area: 1 / 2;
+
+    margin: auto;
+}
+#canvas1{
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 2;
+}
+
+.window_track {
+    margin: 100px auto;
+    grid-area: 1 / 2;
+    width: 25%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 450px;
+    border-radius: 30px;
+    background: #8C6C30;
+
+    box-shadow: 0 20px 20px 0 #0B2621;
+
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.pict img{
+    padding: 10%;
+	width: 100%;
+	height: 100%;
+    border-radius: 20%;
+	object-fit: contain;
+}
+
+.window_track p{
+	padding: 1% 10%;
+
+	font-size: 26px;
+}
+
+.buttons {
+    padding: 15px 10px 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    cursor: pointer;
+    font-size: 26px;
+    padding: 8px;
+}
+.action-btn.action-btn-big {
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music_time {
+    padding: 0px 20px 10px 20px;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.progress-container {
+    margin: 10px 5px;
+
+    background: #F2F2F2;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5% 0 10% 0;
+    height: 6px;
+    width: 100%;
+}
+
+.progress {
+    background-color: black;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+@media (max-width: 1050px) {
+    .window_track {
+        width: 50%;
+    }
+    .track {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .window_track {
+        width: 80%;
+        margin: 80px auto;
+    }
+    .track {
+        grid-template-columns: 1fr;
+    }
+    .pict img {
+        padding: 20px 20px 15px 20px;
+    }
+    .window_track p {
+        font-size: 24px;
+    }
+    .buttons {
+        padding: 10px 5px;
+    }
+    .action-btn {
+        font-size: 20px;
+    }
+    .action-btn.action-btn-big {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .window_track {
+        min-height: 400px;
+        margin: 50px auto;
+    }
+    .pict img {
+        padding: 15px;
+    }
+    .window_track p {
+        font-size: 24px;
+    }
+    .action-btn {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .action-btn.action-btn-big {
+        font-size: 22px;
+    }
+} 
